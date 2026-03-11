@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="signupForm">
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Name" id="signupName" required />
+                <input type="email" placeholder="Email" id="signupEmail" required />
+                <input type="password" placeholder="Password" id="signupPassword" required />
+                <button type="submit">Sign Up</button>
+                <p class="message" id="signupMessage"></p>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form id="loginForm">
+                <h1>Sign in</h1>
+                <input type="email" placeholder="Email" id="loginEmail" required />
+                <div class="password-wrapper">
+                    <input type="password" placeholder="Password" id="loginPassword" required />
+                    <span class="toggle-password" id="togglePassword">Show</span>
+                </div>
+                <div class="login-options">
+                    <label><input type="checkbox" id="rememberMe"> Remember Me</label>
+                    <a href="#" id="forgotPassword">Forgot Password?</a>
+                </div>
+                <button type="submit">Sign In</button>
+                <p class="message" id="loginMessage"></p>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected, please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="welcome-screen" id="welcomeScreen" style="display:none;">
+        <div class="welcome-content">
+            <h1>Welcome to the World of Technology!</h1>
+            <p>Congratulations, <span id="welcomeUser"></span>! You have successfully signed in.</p>
+            <div class="info-section">
+                <h2>Web Development</h2>
+                <p>Web development is the art of building websites and web applications. It involves HTML, CSS, JavaScript, and frameworks like React, Angular, and Vue. Modern web development enables interactive, responsive, and beautiful user experiences.</p>
+                <h2>Programming</h2>
+                <p>Programming is the process of creating instructions for computers using languages like Python, JavaScript, C++, and Java. It powers everything from simple scripts to complex artificial intelligence.</p>
+                <h2>Software</h2>
+                <p>Software refers to the programs and applications that run on computers and devices. From operating systems to mobile apps, software makes technology useful and accessible.</p>
+                <h2>Hardware</h2>
+                <p>Hardware is the physical part of computers and devices—like CPUs, memory, hard drives, and screens. Hardware and software work together to bring technology to life.</p>
+            </div>
+            <button id="logoutBtn">Log Out</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
